@@ -1,0 +1,70 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1471020565000",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachRolePolicy",
+                "iam:DeleteRolePolicy",
+                "iam:DetachRolePolicy",
+                "iam:PutRolePolicy",
+                "iam:GetRolePolicy",
+                "iam:GetRole",
+                "iam:CreateRole"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "Stmt1471020565001",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:GET",
+                "apigateway:HEAD"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:eu-west-1::/restapis",
+                "arn:aws:apigateway:eu-west-1::/restapis/*/resources",
+                "arn:aws:apigateway:eu-west-1::/restapis/*/resources/*"
+            ]
+        },
+        {
+            "Sid": "Stmt1471020565002",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:DELETE"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:eu-west-1::/restapis/*/resources/*"
+            ]
+        },
+        {
+            "Sid": "Stmt1471020565003",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:POST"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:eu-west-1::/restapis/*/deployments",
+                "arn:aws:apigateway:eu-west-1::/restapis/*/resources/*"
+            ]
+        },
+        {
+            "Sid": "Stmt1471020565004",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:PUT"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:eu-west-1::/restapis/*/methods/GET",
+                "arn:aws:apigateway:eu-west-1::/restapis/*/methods/GET/*",
+                "arn:aws:apigateway:eu-west-1::/restapis/*/methods/POST",
+                "arn:aws:apigateway:eu-west-1::/restapis/*/methods/POST/*",
+                "arn:aws:apigateway:eu-west-1::/restapis/*/methods/PUT",
+                "arn:aws:apigateway:eu-west-1::/restapis/*/methods/PUT/*"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+  "lambda_arn": "arn:aws:lambda:eu-west-1:786678849693:function:dns-prefetch-backend", 
+  "app_name": "dns-prefetch-backend", 
+  "stage": "dev"
+}
