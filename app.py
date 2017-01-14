@@ -16,8 +16,7 @@ def dns_prefetch(url):
     html_doc = subprocess.check_output(['curl', url])
     urls = _find_dns_prefetch_links(html_doc)
 
-    domains = ["http://www.soliver.de", "http://www.example.org"]
-    return {'dns-prefetch-domains': domains, 'content': urls}
+    return {'requested_domain': url, 'results': urls}
 
 
 def _find_dns_prefetch_links(html_doc):
